@@ -721,30 +721,12 @@ function formatHeight(passedPerson)
 
 
 
+
+
+
+
+
 /*
-
-console.log(findSiblings(databaseArray[16]));
-*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -755,33 +737,45 @@ function generateDescendants(passedArray)
 		findDescendants(passedArray, passedArray[i].personID)
 	}
 }
+*/
 
+
+console.log(findDescendants(databaseArray[14], 0));
+
+
+
+// console.log(findChildren(databaseArray[4]));
+
+function findDescendants(passedPerson, descendantIndex)
+		{	
+			descendantIndex++;
+
+			var descendantArray = [];
+
+			var childrenArray = findChildren(passedPerson);
+
+			if(typeof childrenArray[0] == 'undefined'){}
+
+			else
+				{
+
+					descendantArray = descendantArray.concat(childrenArray);
+
+					for (var i = 0; i < childrenArray.length; i++)
+					{
+						descendantArray = descendantArray.concat(findDescendants(childrenArray[i]));
+					}
+				}
+
+			return  descendantArray;	
+	};
 
 
 /*
-function findDescendants(passedID, descendantIndex)
-		{	
-			var descendantArray = []
-
-			var childrenFound = findChildren(passedID);
-
-			if(typeof childrenFound[0] == 'undefined'){}
-
-			else{
-
-				relationTypeIndex = formatRelationType(descendantIndex);
-
 				var formattedDescendants = formatRelative(childrenFound, relationTypeIndex);
 
-				for (var i = 0; i < formattedDescendants.length; i++)
-				{
-					push to array
 
-					descendantArray = descendantArray.concat(findDescendants( some array ))
-				}
-			return descendantArray;	
-		}
-	};
+	relationTypeIndex = formatRelationType(descendantIndex);
 */
 
 
