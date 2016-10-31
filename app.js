@@ -4,7 +4,7 @@
 
 var databaseArray =
 [
-	{"personID": "272822514",
+	{"personID": "272822514",   //0
 	  "firstName": "Billy",
 	  "lastName": "Bob",
 	  "gender": "male",
@@ -16,7 +16,7 @@ var databaseArray =
 	  "parents": [],
 	  "currentSpouse": 401222887},
 
-	{"personID": "401222887",
+	{"personID": "401222887",   //1
 	  "firstName": "Uma",
 	  "lastName": "Bob",
 	  "gender": "female",
@@ -28,7 +28,7 @@ var databaseArray =
 	  "parents": [],
 	  "currentSpouse": 272822514 },
 
-	{"personID": "409574486",
+	{"personID": "409574486",  //2
 	  "firstName": "Michael",
 	  "lastName": "Walkens",
 	  "gender": "male",
@@ -40,7 +40,7 @@ var databaseArray =
 	  "parents": [],
 	  "currentSpouse": 260451248 },
 
-	{"personID": "260451248",
+	{"personID": "260451248",     //3
 	  "firstName": "Jon",
 	  "lastName": "Walkens",
 	  "gender": "male",
@@ -52,7 +52,7 @@ var databaseArray =
 	  "parents": [],
 	  "currentSpouse": 409574486 },
 
-	{"personID": "629807187",
+	{"personID": "629807187",  // 4
 	  "firstName": "Jack",
 	  "lastName": "Pafoy",
 	  "gender": "male",
@@ -64,7 +64,7 @@ var databaseArray =
 	  "parents": [],
 	  "currentSpouse": 464142841 },
 
-	{"personID": "464142841",
+	{"personID": "464142841",   // 5
 	  "firstName": "Jen",
 	  "lastName": "Pafoy",
 	  "gender": "female",
@@ -76,7 +76,7 @@ var databaseArray =
 	  "parents": [],
 	  "currentSpouse": 629807187 },
 
-	{"personID": "982411429",
+	{"personID": "982411429",   //6
 	  "firstName": "Mister",
 	  "lastName": "Potatoo",
 	  "gender": "male",
@@ -88,7 +88,7 @@ var databaseArray =
 	  "parents": [],
 	  "currentSpouse": 595767575 },
 
-	{"personID": "595767575",
+	{"personID": "595767575",    //7
 	  "firstName": "Missuz",
 	  "lastName": "Potatoo",
 	  "gender": "female",
@@ -100,7 +100,7 @@ var databaseArray =
 	  "parents": [],
 	  "currentSpouse": 982411429 },
 
-	{"personID": "693243224",
+	{"personID": "693243224",  //8
 	  "firstName": "Joy",
 	  "lastName": "Madden",
 	  "gender": "female",
@@ -110,9 +110,9 @@ var databaseArray =
 	  "eyeColor": "hazel",
 	  "occupation": "doctor",
 	  "parents": [],
-	  "currentSpouse": 693243224 },
+	  "currentSpouse": 888201200},
 
-	{"personID": "888201200",
+	{"personID": "888201200",   //9
 	  "firstName": "Mader",
 	  "lastName": "Madden",
 	  "gender": "male",
@@ -122,9 +122,9 @@ var databaseArray =
 	  "eyeColor": "black",
 	  "occupation": "landscaper",
 	  "parents": [],
-	  "currentSpouse": 888201200 },
+	  "currentSpouse": 693243224  },
 
-	{"personID": "878013758",
+	{"personID": "878013758",     //10
 	  "firstName": "Jill",
 	  "lastName": "Pafoy",
 	  "gender": "female",
@@ -136,7 +136,7 @@ var databaseArray =
 	  "parents": [272822514,401222887],
 	  "currentSpouse": 294874671 },
 
-	{"personID": "951747547",
+	{"personID": "951747547",      //11
 	  "firstName": "Ralph",
 	  "lastName": "Bob",
 	  "gender": "male",
@@ -148,7 +148,7 @@ var databaseArray =
 	  "parents": [272822514,401222887],
 	  "currentSpouse": 159819275 },
 
-	{"personID": "159819275",
+	{"personID": "159819275",        //12
 	  "firstName": "Jasmine",
 	  "lastName": "Bob",
 	  "gender": "female",
@@ -160,7 +160,7 @@ var databaseArray =
 	  "parents": [409574486,260451248],
 	  "currentSpouse": 951747547 },
 
-	{"personID": "348457184",
+	{"personID": "348457184",        //13
 	  "firstName": "Annie",
 	  "lastName": "Pafoy",
 	  "gender": "female",
@@ -172,7 +172,7 @@ var databaseArray =
 	  "parents": [629807187,464142841],
 	  "currentSpouse": null },
 
-	{"personID": "294874671",
+	{"personID": "294874671",           //14
 	  "firstName": "Dave",
 	  "lastName": "Pafoy",
 	  "gender": "male",
@@ -184,7 +184,7 @@ var databaseArray =
 	  "parents": [629807187,464142841],
 	  "currentSpouse": 878013758 },
 
-	{"personID": "931247228",
+	{"personID": "931247228",         //15
 	  "firstName": "Amii",
 	  "lastName": "Pafoy",
 	  "gender": "female",
@@ -196,7 +196,7 @@ var databaseArray =
 	  "parents": [629807187,464142841],
 	  "currentSpouse": null },
 
-	{"personID": "822843554",
+	{"personID": "822843554",           //16
 	  "firstName": "Regina",
 	  "lastName": "Madden",
 	  "gender": "female",
@@ -208,7 +208,7 @@ var databaseArray =
 	  "parents": [693243224, 888201200],
 	  "currentSpouse": null },
 
-	{"personID": "819168108",
+	{"personID": "819168108",          //17
 	  "firstName": "Hana",
 	  "lastName": "Madden",
 	  "gender": "female",
@@ -220,7 +220,7 @@ var databaseArray =
 	  "parents": [693243224, 888201200],
 	  "currentSpouse": null },
 
-	{"personID": "969837479",
+	{"personID": "969837479",             //18
 	  "firstName": "Eloise",
 	  "lastName": "Madden",
 	  "gender": "female",
@@ -232,7 +232,7 @@ var databaseArray =
 	  "parents": [693243224, 888201200],
 	  "currentSpouse": null },
 
-	{"personID": "313207561",
+	{"personID": "313207561",                //19
 	  "firstName": "Mattias",
 	  "lastName": "Madden",
 	  "gender": "male",
@@ -244,7 +244,7 @@ var databaseArray =
 	  "parents": [693243224, 888201200],
 	  "currentSpouse": 313997561 },
 
-	{"personID": "313997561",
+	{"personID": "313997561",                //20
 	  "firstName": "Ellen",
 	  "lastName": "Madden",
 	  "gender": "female",
@@ -256,7 +256,7 @@ var databaseArray =
 	  "parents": [],
 	  "currentSpouse": 313207561 },
 
-	{"personID": "313998000",
+	{"personID": "313998000",             //21
 	  "firstName": "Joey",
 	  "lastName": "Madden",
 	  "gender": "female",
@@ -317,9 +317,12 @@ function display (passedArray){
 		console.log("\n\nSearch Results:\n\n\n" + print.join(""));
 		};
 
-addFamilyArray();
+/*addFamilyArray();
 
-display(sortArray(databaseArray,"height"));
+display(sortArray(databaseArray,"height"));*/
+
+
+
 
 
 function sortArray(passedArray, passedProperty){
@@ -328,12 +331,7 @@ function sortArray(passedArray, passedProperty){
 	};
 
 
-function addFamilyArray(){
-	for (var i = 0; i < databaseArray.length; i++) {
- 		databaseArray[i].family = [];
- 		databaseArray[i].family[0] = "Family Members";
-		}	
-};
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -348,40 +346,208 @@ function addFamilyArray(){
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-function findSpouse(passedArray)
+/*
+function appendPersonAttributes(passedArray)
+{
+	for (var i = 0; i < passedArray.length; i++)
 	{
+		passedPerson.spouseName = [];
+		passedPerson.parentNames = [];
+		passedPerson.childrenNames = [];
+		passedPerson.siblingNames = [];
+		passedPerson.relativeNames = [];
+		passedPerson.formattedHeight = "";
+		passedPerson.ageInYears = 0;
+	}
+}
+*/
+
+
+
+function formatRelative(passedArray, passedRelationIndex)
+	{
+		var formattedRelative = passedArray.map(function(person){return {relationTypeIndex: passedRelationIndex, fullName: person.firstName + " " + person.lastName, relativeID: person.personID, relativeAge: person.dob}});
+		return	formattedRelative;
 	};
 
-function findChildren(passedArray, passedID)
+
+
+function omniSearch(passedArray, searchCriteria, searchTerm)
+	{
+		var filteredArray = passedArray.filter(function(value){return value[searchCriteria] == searchTerm;});
+		return filteredArray;
+	};
+
+
+
+function formatResults(passedArray)
+{
+	for (var i = 0; i < passedArray.length; i++) 
+	{
+		passedArray[i] = formatPersonAttributes(passedArray[i]);
+	}
+};
+
+
+
+
+function formatPersonAttributes(passedPerson)
+{
+	passedPerson.spouseName = findSpouse(passedPerson);       // done
+	passedPerson.parentNames = findParents(passedPerson);		       // done 
+	passedPerson.childrenNames = findChildren(passedPerson);  
+	passedPerson.siblingNames = findSiblings(passedPerson.personID);
+	passedPerson.relativeNames = findRelatives(passedPerson.personID);
+	passedPerson.formattedHeight = formatHeight(passedPerson);
+	passedPerson.ageInYears = formatAge(passedPerson);
+
+}
+
+
+function findSpouse(passedPerson)
+	{
+		var spouseArray = [];
+		if(typeof passedPerson.currentSpouse == null){}
+		else
+		{
+			spouseArray = spouseArray.concat(omniSearch(databaseArray, "personID", passedPerson.currentSpouse));
+		}
+		return spouseArray;
+	};
+
+
+
+function findChildren(passedPerson)
 	{
 		var childrenArray = [];
-		for (var i = 0; i < passedArray.length; i++)
+		for (var i = 0; i < databaseArray.length; i++)
 		{
-			if(typeof passedArray[i].parents[0] == 'undefined'){}
-			else if(passedArray[i].parents[0] == passedID || passedArray[i].parents[1] == passedID)
+			if(typeof databaseArray[i].parents[0] == 'undefined'){}
+			else if(databaseArray[i].parents[0] == passedPerson.personID || databaseArray[i].parents[1] == passedPerson.personID)
 			{
-				childrenArray.push(passedArray[i]);
+				childrenArray = childrenArray.concat(databaseArray[i]);
 			}
 		}
 		return childrenArray;
 	};
 
-function findParents(passedArray)
+
+
+function findParents(passedPerson)
 	{
-		/*var num = 0;
-		for(var ID in passedArray)
+		var parentsArray = [];
+		if(typeof passedPerson.parents[0] == 'undefined'){}
+		else
 		{
-			if(ID == 272822514)
+			for (var i = 0; i < passedPerson.parents.length; i++)
 			{
-				num++;
+				parentsArray = parentsArray.concat(omniSearch(databaseArray, "personID", passedPerson.parents[i]));
 			}
 		}
-		return num;*/
+		return parentsArray;
 	};
 
-function findSiblings(passedArray)
-	{		
+
+
+function findSiblings(passedPerson)
+	{
+		var siblingsArray = [];
+		var parentsArray = [];
+		if(typeof passedPerson.parents[0] == 'undefined'){}
+		else
+		{
+			for (var i = 0; i < passedPerson.parents.length; i++)
+			{
+				parentsArray = parentsArray.concat(omniSearch(databaseArray, "personID", passedPerson.parents[i]));
+			}
+			for (var i = 0; i < parentsArray.length; i++)
+			{
+				siblingsArray = siblingsArray.concat(findChildren(parentsArray[i]));
+			}
+		}
+		return siblingsArray;
 	};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log(findSiblings(databaseArray[16]));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function generateDescendants(passedArray)
+{
+	for (var i = 0; i < passedArray.length; i++) {
+		findDescendants(passedArray, passedArray[i].personID)
+	}
+}
+
+
+
+/*
+function findDescendants(passedID, descendantIndex)
+		{	
+			var descendantArray = []
+
+			var childrenFound = findChildren(passedID);
+
+			if(typeof childrenFound[0] == 'undefined'){}
+
+			else{
+
+				relationTypeIndex = formatRelationType(descendantIndex);
+
+				var formattedDescendants = formatRelative(childrenFound, relationTypeIndex);
+
+				for (var i = 0; i < formattedDescendants.length; i++)
+				{
+					push to array
+
+					descendantArray = descendantArray.concat(findDescendants( some array ))
+				}
+			return descendantArray;	
+		}
+	};
+*/
+
+
+
+
+
+
+
 
 function findGrandchild(passedArray)
 	{	
@@ -408,9 +574,7 @@ function findGreatGrandParent(passedArray)
 	{		
 	};
 
-function findDescendants(passedArray)
-	{		
-	};
+
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -490,14 +654,13 @@ function omniSearch(passedArray, searchTerm, searchCriteria)
 	};
 };*/
 
-/*
-function searchObjects(passedArray, searchTerm, searchCriteria){
+/*function searchObjects(passedArray, searchTerm, searchCriteria){
 	var filteredArray = passedArray.filter(function(value)
 		{return value[searchTerm] === searchCriteria;});
 	return filteredArray;}
-};*/
+};
 
-
+*/
 
 
 
