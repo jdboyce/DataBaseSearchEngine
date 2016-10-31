@@ -1,5 +1,11 @@
 
+
+
+
+
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 
 var databaseArray =
@@ -280,142 +286,87 @@ var databaseArray =
 
 
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-
-// display(databaseArray);
-
-/*
-requestKey();*/
-
-
-// console.log(formatPersonAttributes(databaseArray[0]));
 
 
 
 
-// test();
 
-// function test()
-// {
-// 	var testArray = [];
 
-// 	for (var i = 0; i < databaseArray.length; i++)
-// 	{
-// 		testArray = testArray.concat(formatPersonAttributes(databaseArray[i]));
-// 	}
-// 	console.log(testArray);
-// }
 
+
+
+
+
+
+
+
+
+
+		//    INITIALIZE
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-function display (passedArray){
-	 var print = passedArray.map(function(person)
-	 	{return "First Name:  " + person.firstName + "\n" +
-				"Last Name:  " + person.lastName + "\n" +
-				"ID Number:  " + person.personID + "\n" +
-				"Gender:  " + person.gender + "\n" +
-				"Date of Birth:  " + person.dob + "\n" +
-				"Height:  " + person.height + "\n" +
-				"Weight:  " + person.weight + "\n" +
-				"Eye Color:  " + person.eyeColor + "\n" +
-				"Occupation:  " + person.occupation + "\n\n\n"});
-
-		alert("\n\nSearch Results:\n\n\n" + print.join(""));
-	};
-
-
-
-function sortArray(passedArray, passedProperty){
-	passedArray.sort(function(a, b){return a[passedProperty]-b[passedProperty]});
-	return	passedArray;
-	};
-
-
-
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
+formatDatabase();
+var range = [1,100];
+console.log(rangeSearch(databaseArray, "ageInYears", range));
 
 requestKey();
 
 
 
+//////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		//    INPUT / FILTER / DISPLAY FUNCTIONS
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+ // Search/filter design approved by Nick.
 
 function requestKey()
 	{
 		var userKeyInput = prompt("\nSelect your desired search terms by entering the matching key or keys.\n\nTo select multiple search terms at once, simply enter a comma and space between keys. For instance, entering \"F, L, A\" will allow you to search by matching first name, last name, and age. Keys are not case sensitive.\n\n\n\
-                                      [Key]   -   [Search Term]\n\n\
-                                            F   -   First Name\n\
-                                            L   -   Last Name\n\
-                                            N   -   ID Number\n\
-                                            G   -   Gender\n\
-                                            A   -   Age\n\
-                                            R   -   Age Range\n\
-                                            H   -   Height\n\
-                                            W   -  Weight\n\
-                                            E    -   Eye Color\n\
-                                            O   -   Occupation\n\n");
+                                     [Key]   -   [Search Term]\n\n\
+                                           F   -   First Name\n\
+                                           L   -   Last Name\n\
+                                           N   -   ID Number\n\
+                                           G   -   Gender\n\
+                                           A   -   Age\n\
+                                           R   -   Age Range\n\
+                                           H   -   Height\n\
+                                           W   -  Weight\n\
+                                           E    -   Eye Color\n\
+                                           O   -   Occupation\n\n").toLowerCase();
 	 populatePromptsByKey(formatKeyInput(userKeyInput));
 	};
+
 
 
 function populatePromptsByKey(passedKeyArray)
@@ -427,33 +378,222 @@ function populatePromptsByKey(passedKeyArray)
 		
 			switch(passedKeyArray[i])
 			{
-				case "f": resultsArray = findFirstName(resultsArray); break;
+				case "x": resultsArray = databaseArray; break;  // Not displayed to user
 
-				case "l": resultsArray = findLastName(resultsArray); break;
+				case "f": resultsArray = filterFirstName(resultsArray); break;
 
-				case "n": resultsArray = findIDNumber(resultsArray); break;
+				case "l": resultsArray = filterLastName(resultsArray); break;
 
-				case "g": resultsArray = findGender(resultsArray); break;
+				case "n": resultsArray = filterIDNumber(resultsArray); break;
 
-				case "a": resultsArray = findAge(resultsArray); break;
+				case "g": resultsArray = filterGender(resultsArray); break;
 
-				case "r": resultsArray = findAgeRange(resultsArray); break;
+				case "a": resultsArray = filterAge(resultsArray); break;
 
-				case "h": resultsArray = findHeight(resultsArray); break;
+				case "r": resultsArray = filterAgeRange(resultsArray); break;
 
-				case "w": resultsArray = findWeight(resultsArray); break;
+				case "h": resultsArray = filterHeight(resultsArray); break;
 
-				case "e": resultsArray = findEyeColor(resultsArray); break;
+				case "w": resultsArray = filterWeight(resultsArray); break;
 
-				case "o": resultsArray = findOccupation(resultsArray); break;
+				case "e": resultsArray = filterEyeColor(resultsArray); break;
+
+				case "o": resultsArray = filterOccupation(resultsArray); break;
 
 				default: requestKey();
 			}
 		}
-		console.log(resultsArray);
+		displayResults(resultsArray);
 	};
 
 
+
+
+function filterFirstName(passedArray)
+	{
+		var firstNameInput = prompt("Please enter the first name you wish to search for, in format \"Firstname\", then press OK.");
+		var resultsArray = omniSearch(passedArray, "firstName", firstNameInput)
+		return resultsArray;
+	};
+
+
+
+function filterLastName(passedArray)
+	{
+		var lastNameInput = prompt("Please enter the last name you wish to search for, \"Lastname\", then press OK.");
+		var resultsArray = omniSearch(passedArray, "lastName", lastNameInput)
+		return resultsArray;
+	};
+
+
+
+function filterIDNumber(passedArray)
+	{
+		var idNumberInput = prompt("Please enter the ID number you wish to search for, in format \"#########\", then press OK.");
+		var resultsArray = omniSearch(passedArray, "personID", idNumberInput)
+		return resultsArray;
+	};
+
+
+
+function filterGender(passedArray)
+	{
+		var genderInput = prompt("Please enter the gender you wish to search for, either \"male\" or \"female\", then press OK.");
+		var resultsArray = omniSearch(passedArray, "gender", genderInput)
+		return resultsArray;
+	};
+
+
+
+function filterAge(passedArray)
+	{
+		var ageInput = prompt("Please enter the age you wish to search for, in format \"##\", then press OK.");
+		var resultsArray = omniSearch(passedArray, "ageInYears", ageInput)
+		return resultsArray;
+	};
+
+
+
+function filterAgeRange(passedArray)
+	{
+		var ageRangeInput = prompt("Please enter the age range you wish to search for, in format \"##-##\", then press OK.");
+		var ageRangeArray = formatRange(ageRangeInput);
+		var resultsArray = rangeSearch(passedArray, "ageInYears", ageRangeArray)
+		return resultsArray;
+	};
+
+
+
+function filterHeight(passedArray)
+	{
+		var heightInput = prompt("Please enter the height you wish to search for, in format \" #'#\" \", then press OK.");
+		var resultsArray = omniSearch(passedArray, "formattedHeight", heightInput)
+		return resultsArray;
+	};
+
+
+
+function filterWeight(passedArray)
+	{
+		var weightInput = prompt("Please enter the weight you wish to search for, in format \"##\", then press OK (weight is displayed in lbs).");
+		var resultsArray = omniSearch(passedArray, "weight", weightInput)
+		return resultsArray;
+	};
+
+
+
+function filterEyeColor(passedArray)
+	{
+		var eyeColorInput = prompt("Please enter the eye color you wish to search for, in format \"color\", then press OK.");
+		var resultsArray = omniSearch(passedArray, "eyeColor", eyeColorInput)
+		return resultsArray;
+	};
+
+
+
+function filterOccupation(passedArray)
+	{
+		var occupationInput = prompt("Please enter the occupation you wish to search for, in format \"occupation\", then press OK.");
+		var resultsArray = omniSearch(passedArray, "occupation", occupationInput)
+		return resultsArray;
+	};
+
+
+
+function displayResults (passedArray)
+	{
+		if(typeof passedArray[0] != 'undefined')
+			{
+			 	var print = passedArray.map(function(person)
+			 	{return "First Name:  " + person.firstName + "\n" +
+						"Last Name:  " + person.lastName + "\n" +
+						"ID Number:  " + person.personID + "\n" +
+						"Gender:  " + person.gender + "\n" +
+						"Date of Birth:  " + person.dob + "\n" +
+						"Age (Years):  " + person.ageInYears + "\n" +
+						"Height:  " + person.formattedHeight + "\n" +
+						"Weight:  " + person.weight + " Lbs" + "\n" +
+						"Eye Color:  " + person.eyeColor + "\n" +
+						"Occupation:  " + person.occupation + "\n" +
+						"Spouse:  " + concatNames(person.spouseName) + "\n" +
+					    "Children:  " + concatNames(person.childrenNames) + "\n" +
+					    "Parents:  " + concatNames(person.parentNames) + "\n" +
+					    "Siblings:  " + concatNames(person.siblingNames) + "\n" +
+						"Descendants:  " + concatNames(person.descendants) + "\n" +"\n\n\n"});
+			}
+		else
+			{
+				var print = ["No Results Found"];
+			}
+		alert("\n\nSearch Results:\n\n\n" + print.join("") +"\n\n\nPress OK to Start New Search\n\n");
+		console.log(print);
+		requestKey();
+	};
+
+
+
+function checkIfArrayUndefined(passedArray)
+	{
+		if(typeof passedArray[0] != 'undefined')
+		{
+			return passedArray;
+		}
+		else
+		{
+			return "Unknown";
+		}
+	};
+
+
+
+function concatNames(passedArray)
+	{
+		var namesCombined = [];
+		
+		if(typeof passedArray[0] != 'undefined')
+		{
+
+			for (var i = 0; i < passedArray.length; i++)
+			{
+				var namesCombined = namesCombined.concat(" " + passedArray[i].fullName)
+			}
+			namesCombined.join(", ");
+
+		}
+		return checkIfArrayUndefined(namesCombined);
+	};
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		//    SEARCH FUNCTIONS
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -465,9 +605,11 @@ function omniSearch(passedArray, searchCriteria, searchTerm)
 		}
 		catch(e)
 		{
-			e = "Unable to search.";
+			var error = e;
+			return "Unable to search.";
 		}
 	};
+
 
 
 function rangeSearch(passedArray, searchCriteria, searchRangeArray)
@@ -478,95 +620,10 @@ function rangeSearch(passedArray, searchCriteria, searchRangeArray)
 		}
 		catch(e)
 		{
-			e = "Unable to search.";
+			var error = e;
+			return "Unable to search.";
 		}
 	};
-
-
-
-
-
-function findFirstName(passedArray)
-	{
-		var firstNameInput = prompt("Please enter the first name you wish to search for:");
-		var resultsArray = omniSearch(passedArray, "firstName", firstNameInput)
-		return resultsArray;
-	};
-
-
-function findLastName(passedArray)
-	{
-		var lastNameInput = prompt("Please enter the last name you wish to search for:");
-		var resultsArray = omniSearch(passedArray, "lastName", lastNameInput)
-		return resultsArray;
-	};
-
-
-function findIDNumber(passedArray)
-	{
-		var idNumberInput = prompt("Please enter the ID number you wish to search for:");
-		var resultsArray = omniSearch(passedArray, "personID", idNumberInput)
-		return resultsArray;
-	};
-
-
-function findGender(passedArray)
-	{
-		var genderInput = prompt("Please enter the gender you wish to search for:");
-		var resultsArray = omniSearch(passedArray, "gender", genderInput)
-		return resultsArray;
-	};
-
-
-function findAge(passedArray)
-	{
-		var ageInput = prompt("Please enter the age you wish to search for:");
-		var resultsArray = omniSearch(passedArray, "ageInYears", ageInput)
-		return resultsArray;
-	};
-
-
-function findAgeRange(passedArray)
-	{
-		var ageRangeInput = prompt("Please enter the age range you wish to search for:");
-		var ageRangeArray = formatRange(ageRangeInput);
-		var resultsArray = rangeSearch(passedArray, "ageInYears", ageRangeArray)
-		return resultsArray;
-	};
-
-
-function findHeight(passedArray)
-	{
-		var heightInput = prompt("Please enter the height you wish to search for:");
-		var resultsArray = omniSearch(passedArray, "formattedHeight", heightInput)
-		return resultsArray;
-	};
-
-
-function findWeight(passedArray)
-	{
-		var weightInput = prompt("Please enter the weight you wish to search for:");
-		var resultsArray = omniSearch(passedArray, "weight", weightInput)
-		return resultsArray;
-	};
-
-
-function findEyeColor(passedArray)
-	{
-		var eyeColorInput = prompt("Please enter the eye color you wish to search for:");
-		var resultsArray = omniSearch(passedArray, "eyeColor", eyeColorInput)
-		return resultsArray;
-	};
-
-
-function findOccupation(passedArray)
-	{
-		var occupationInput = prompt("Please enter the occupation you wish to search for:");
-		var resultsArray = omniSearch(passedArray, "occupation", occupationInput)
-		return resultsArray;
-	};
-
-
 
 
 
@@ -579,6 +636,7 @@ function findSpouse(passedPerson)
 		}
 		return spouseArray;
 	};
+
 
 
 function findChildren(passedPerson)
@@ -596,9 +654,6 @@ function findChildren(passedPerson)
 
 
 
-
-
-
 function findParents(passedPerson)
 	{
 		var parentsArray = [];
@@ -611,6 +666,7 @@ function findParents(passedPerson)
 		}
 		return parentsArray;
 	};
+
 
 
 function findSiblings(passedPerson)
@@ -633,6 +689,27 @@ function findSiblings(passedPerson)
 
 
 
+function findDescendants(passedPerson/*, descendantIndex*/)
+		{	
+			/*descendantIndex++;*/
+
+			var descendantArray = [];
+
+			var childrenArray = findChildren(passedPerson);
+
+			if(typeof childrenArray[0] != 'undefined')
+				{
+					for (var i = 0; i < childrenArray.length; i++)
+					{
+						descendantArray = descendantArray.concat(findDescendants(childrenArray[i]/*, descendantIndex*/));
+					}
+					descendantArray = descendantArray.concat(childrenArray);
+				}
+			return  descendantArray;	
+		};
+
+
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -644,12 +721,26 @@ function findSiblings(passedPerson)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		//    FORMATTING FUNCTIONS
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-formatDatabase();
-
-console.log(databaseArray);
 
 function formatDatabase()
 	{
@@ -666,11 +757,11 @@ function formatDatabase()
 
 
 function formatPersonAttributes(passedPerson)
-{
-	passedPerson.formattedHeight = formatHeight(passedPerson);            
-	passedPerson.ageInYears = formatAge(passedPerson);                   
-	return passedPerson;
-};
+	{
+		passedPerson.formattedHeight = formatHeight(passedPerson);            
+		passedPerson.ageInYears = formatAge(passedPerson);                   
+		return passedPerson;
+	};
 
 
 
@@ -679,10 +770,11 @@ function formatPersonRelatives(passedPerson)
 		passedPerson.spouseName = formatRelative(findSpouse(passedPerson),1);                   
 		passedPerson.childrenNames = formatRelative(findChildren(passedPerson),2);             
 		passedPerson.parentNames = formatRelative(findParents(passedPerson),3);		        
-		passedPerson.siblingNames = formatRelative(findSiblings(passedPerson),4);      
-		// passedPerson.relativeNames = findRelatives(passedPerson.personID);
+		passedPerson.siblingNames = formatRelative(findSiblings(passedPerson),4);
+		passedPerson.descendants = formatRelative(findDescendants(passedPerson));      
 		return passedPerson;
 	};
+
 
 
 function formatRelative(passedArray, passedRelationIndex)
@@ -693,9 +785,11 @@ function formatRelative(passedArray, passedRelationIndex)
 		}
 		catch(e)
 		{
-			e = "Unable to format.";
+			var error = e;
+			return "Unable to format.";
 		}
 	};
+
 
 
 function formatKeyInput(userKeyInput)
@@ -706,10 +800,13 @@ function formatKeyInput(userKeyInput)
 	};
 
 
+
 function formatRange(passedString)
 	{
 		var formattedRangeArray = passedString.split("-");
+		return formattedRangeArray;
 	};
+
 
 
 function formatAge(passedPerson)
@@ -734,6 +831,7 @@ function formatAge(passedPerson)
 	};
 
 
+
 function formatHeight(passedPerson)
 	{
 	    var feet = Math.floor(passedPerson.height/12);
@@ -744,7 +842,6 @@ function formatHeight(passedPerson)
 
 
 
-
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -771,39 +868,18 @@ function formatHeight(passedPerson)
 
 
 
-
-
-
-
+		//    NEXT OF KIN FUNCTIONS
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
-
-function findDescendants(passedPerson, descendantIndex)
-		{	
-			descendantIndex++;
-
-			var descendantArray = [];
-
-			var childrenArray = findChildren(passedPerson);
-
-			if(typeof childrenArray[0] == 'undefined'){}
-
-			else
-				{
-					for (var i = 0; i < childrenArray.length; i++)
-					{
-						descendantArray = descendantArray.concat(findDescendants(childrenArray[i], descendantIndex));
-					}
-					descendantArray = descendantArray.concat(formatRelative(childrenArray,7));
-				}
-			return  descendantArray;	
-		};
 
 
 /*
-
+function sortArray(passedArray, passedProperty)
+	{
+		passedArray.sort(function(a, b){return a[passedProperty]-b[passedProperty]});
+		return	passedArray;
+	};
 
 function findGrandchild(passedArray)
 	{	
@@ -834,19 +910,3 @@ function findGreatGrandParent(passedArray)
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
