@@ -2,13 +2,15 @@
  "use strict";
 
 
-		//    ASSIGNED PERSON DATABASE
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+
 var databaseArray =
 [
-	{"personID": "272822514",
+	{"personID": "272822514",                   //0
 	  "firstName": "Billy",
 	  "lastName": "Bob",
 	  "gender": "male",
@@ -20,7 +22,7 @@ var databaseArray =
 	  "parents": [],
 	  "currentSpouse": 401222887},
 
-	{"personID": "401222887",
+	{"personID": "401222887",                   //1
 	  "firstName": "Uma",
 	  "lastName": "Bob",
 	  "gender": "female",
@@ -32,7 +34,7 @@ var databaseArray =
 	  "parents": [],
 	  "currentSpouse": 272822514 },
 
-	{"personID": "409574486",
+	{"personID": "409574486",                  //2
 	  "firstName": "Michael",
 	  "lastName": "Walkens",
 	  "gender": "male",
@@ -44,7 +46,7 @@ var databaseArray =
 	  "parents": [],
 	  "currentSpouse": 260451248 },
 
-	{"personID": "260451248",
+	{"personID": "260451248",                   //3
 	  "firstName": "Jon",
 	  "lastName": "Walkens",
 	  "gender": "male",
@@ -56,7 +58,7 @@ var databaseArray =
 	  "parents": [],
 	  "currentSpouse": 409574486 },
 
-	{"personID": "629807187",
+	{"personID": "629807187",                   // 4
 	  "firstName": "Jack",
 	  "lastName": "Pafoy",
 	  "gender": "male",
@@ -68,7 +70,7 @@ var databaseArray =
 	  "parents": [],
 	  "currentSpouse": 464142841 },
 
-	{"personID": "464142841",
+	{"personID": "464142841",                   // 5
 	  "firstName": "Jen",
 	  "lastName": "Pafoy",
 	  "gender": "female",
@@ -80,7 +82,7 @@ var databaseArray =
 	  "parents": [],
 	  "currentSpouse": 629807187 },
 
-	{"personID": "982411429",
+	{"personID": "982411429",                   //6
 	  "firstName": "Mister",
 	  "lastName": "Potatoo",
 	  "gender": "male",
@@ -92,7 +94,7 @@ var databaseArray =
 	  "parents": [],
 	  "currentSpouse": 595767575 },
 
-	{"personID": "595767575",
+	{"personID": "595767575",                   //7
 	  "firstName": "Missuz", 
 	  "lastName": "Potatoo",
 	  "gender": "female",
@@ -104,7 +106,7 @@ var databaseArray =
 	  "parents": [],
 	  "currentSpouse": 982411429 },
 
-	{"personID": "693243224",
+	{"personID": "693243224",                   //8
 	  "firstName": "Joy",
 	  "lastName": "Madden",
 	  "gender": "female",
@@ -116,7 +118,7 @@ var databaseArray =
 	  "parents": [],
 	  "currentSpouse": 888201200},
 
-	{"personID": "888201200",
+	{"personID": "888201200",                   //9
 	  "firstName": "Mader",
 	  "lastName": "Madden",
 	  "gender": "male",
@@ -128,7 +130,7 @@ var databaseArray =
 	  "parents": [],
 	  "currentSpouse": 693243224  },
 
-	{"personID": "878013758",
+	{"personID": "878013758",                   //10
 	  "firstName": "Jill",
 	  "lastName": "Pafoy",
 	  "gender": "female",
@@ -140,7 +142,7 @@ var databaseArray =
 	  "parents": [272822514,401222887],
 	  "currentSpouse": 294874671 },
 
-	{"personID": "951747547",
+	{"personID": "951747547",                   //11
 	  "firstName": "Ralph",
 	  "lastName": "Bob",
 	  "gender": "male",
@@ -152,7 +154,7 @@ var databaseArray =
 	  "parents": [272822514,401222887],
 	  "currentSpouse": 159819275 },
 
-	{"personID": "159819275",
+	{"personID": "159819275",                    //12
 	  "firstName": "Jasmine",
 	  "lastName": "Bob",
 	  "gender": "female",
@@ -164,7 +166,7 @@ var databaseArray =
 	  "parents": [409574486,260451248],
 	  "currentSpouse": 951747547 },
 
-	{"personID": "348457184",
+	{"personID": "348457184",                    //13
 	  "firstName": "Annie",
 	  "lastName": "Pafoy",
 	  "gender": "female",
@@ -176,7 +178,7 @@ var databaseArray =
 	  "parents": [629807187,464142841],
 	  "currentSpouse": null },
 
-	{"personID": "294874671",
+	{"personID": "294874671",                    //14
 	  "firstName": "Dave",
 	  "lastName": "Pafoy",
 	  "gender": "male",
@@ -188,7 +190,7 @@ var databaseArray =
 	  "parents": [629807187,464142841],
 	  "currentSpouse": 878013758 },
 
-	{"personID": "931247228",
+	{"personID": "931247228",                   //15
 	  "firstName": "Amii",
 	  "lastName": "Pafoy",
 	  "gender": "female",
@@ -200,7 +202,7 @@ var databaseArray =
 	  "parents": [629807187,464142841],
 	  "currentSpouse": null },
 
-	{"personID": "822843554",
+	{"personID": "822843554",                   //16
 	  "firstName": "Regina", 
 	  "lastName": "Madden",
 	  "gender": "female",
@@ -212,7 +214,7 @@ var databaseArray =
 	  "parents": [693243224, 888201200],
 	  "currentSpouse": null },
 
-	{"personID": "819168108",
+	{"personID": "819168108",                   //17
 	  "firstName": "Hana",
 	  "lastName": "Madden",
 	  "gender": "female",
@@ -224,7 +226,7 @@ var databaseArray =
 	  "parents": [693243224, 888201200],
 	  "currentSpouse": null },
  
-	{"personID": "969837479",
+	{"personID": "969837479",                   //18
 	  "firstName": "Eloise",
 	  "lastName": "Madden",
 	  "gender": "female",
@@ -236,7 +238,7 @@ var databaseArray =
 	  "parents": [693243224, 888201200],
 	  "currentSpouse": null },
 
-	{"personID": "313207561",
+	{"personID": "313207561",                   //19
 	  "firstName": "Mattias",
 	  "lastName": "Madden",
 	  "gender": "male",
@@ -248,7 +250,7 @@ var databaseArray =
 	  "parents": [693243224, 888201200],
 	  "currentSpouse": 313997561 },
 
-	{"personID": "313997561",
+	{"personID": "313997561",                 //20
 	  "firstName": "Ellen",
 	  "lastName": "Madden",
 	  "gender": "female",
@@ -260,7 +262,7 @@ var databaseArray =
 	  "parents": [],
 	  "currentSpouse": 313207561 },
 
-	{"personID": "313998000",
+	{"personID": "313998000",                 //21
 	  "firstName": "Joey",
 	  "lastName": "Madden",
 	  "gender": "female",
@@ -272,7 +274,7 @@ var databaseArray =
 	  "parents": [313207561,313997561],
 	  "currentSpouse": null },
 
-	  {"personID": "313998001",
+	  {"personID": "313998001",               //22
 	  "firstName": "Jay",
 	  "lastName": "Madden",
 	  "gender": "male",
@@ -285,7 +287,29 @@ var databaseArray =
 	  "currentSpouse": null }
 ];
 
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -294,11 +318,37 @@ var databaseArray =
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+
 formatDatabase(databaseArray);
+
 
 requestKey();
 
+
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -306,6 +356,10 @@ requestKey();
 		//    INPUT / FILTER / DISPLAY FUNCTIONS
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+ // Search/filter design approved by Nick.
 
 function requestKey()
 	{
@@ -325,12 +379,14 @@ function requestKey()
 	};
 
 
+
 function populatePromptsByKey(passedKeyArray)
 	{
 		var resultsArray = databaseArray;
 
 		for (var i = 0; i < passedKeyArray.length; i++)
 		{
+		
 			switch(passedKeyArray[i])
 			{
 				case "x": resultsArray = databaseArray; break;  // Not displayed to user
@@ -362,14 +418,15 @@ function populatePromptsByKey(passedKeyArray)
 	};
 
 
+
+
 function filterFirstName(passedArray)
 	{
 		var resultsArray = [];
 		var firstNameInput = prompt("Please enter the first name you wish to search for, in format \"Firstname\".");
-		
 		if (/^[A-Z]{1}[a-z]+$/.test(firstNameInput))
 		{
-			resultsArray = omniSearch(passedArray, "firstName", firstNameInput)
+		resultsArray = omniSearch(passedArray, "firstName", firstNameInput)
 		}
 		else if (firstNameInput == null)
 		{
@@ -384,14 +441,14 @@ function filterFirstName(passedArray)
 	};
 
 
+
 function filterLastName(passedArray)
 	{
 		var resultsArray = [];
 		var lastNameInput = prompt("Please enter the last name you wish to search for, in format \"Lastname\".");
-		
 		if (/^[A-Z]{1}[a-z]+$/.test(lastNameInput))
 		{
-			resultsArray = omniSearch(passedArray, "lastName", lastNameInput)
+		resultsArray = omniSearch(passedArray, "lastName", lastNameInput)
 		}
 		else if (lastNameInput == null)
 		{
@@ -406,14 +463,14 @@ function filterLastName(passedArray)
 	};
 
 
+
 function filterIDNumber(passedArray)
 	{
 		var resultsArray = [];
 		var idNumberInput = prompt("Please enter the ID number you wish to search for, in format \"#########\".");
-		
 		if (/^[0-9]{9}$/.test(idNumberInput))
 		{
-			resultsArray = omniSearch(passedArray, "personID", idNumberInput)
+		resultsArray = omniSearch(passedArray, "personID", idNumberInput)
 		}
 		else if (idNumberInput == null)
 		{
@@ -428,14 +485,14 @@ function filterIDNumber(passedArray)
 	};
 
 
+
 function filterGender(passedArray)
 	{
 		var resultsArray = [];
 		var genderInput = prompt("Please enter the gender you wish to search for, either \"male\" or \"female\".");
-		
 		if (/(^(fe)?male$)/.test(genderInput))
 		{
-			resultsArray = omniSearch(passedArray, "gender", genderInput)
+		resultsArray = omniSearch(passedArray, "gender", genderInput)
 		}
 		else if (genderInput == null)
 		{
@@ -450,14 +507,14 @@ function filterGender(passedArray)
 	};
 
 
+
 function filterAge(passedArray)
 	{
 		var resultsArray = [];
 		var ageInput = prompt("Please enter the age you wish to search for, in format \"##\".");
-		
 		if (/^[0-9]{1,2}$/.test(ageInput))
 		{
-			resultsArray = omniSearch(passedArray, "ageInYears", ageInput)
+		resultsArray = omniSearch(passedArray, "ageInYears", ageInput)
 		}
 		else if (ageInput == null)
 		{
@@ -472,15 +529,15 @@ function filterAge(passedArray)
 	};
 
 
+
 function filterAgeRange(passedArray)
 	{
 		var resultsArray = [];
 		var ageRangeInput = prompt("Please enter the age range you wish to search for, in format \"##-##\".");
-		
 		if (/^[0-9]{1,2}-[0-9]{1,2}$/.test(ageRangeInput))
 		{
-			var ageRangeArray = formatRange(ageRangeInput);
-			resultsArray = rangeSearch(passedArray, "ageInYears", ageRangeArray)		
+		var ageRangeArray = formatRange(ageRangeInput);
+		resultsArray = rangeSearch(passedArray, "ageInYears", ageRangeArray)		
 		}
 		else if (ageRangeArray == null)
 		{
@@ -495,11 +552,12 @@ function filterAgeRange(passedArray)
 	};
 
 
+
+
 function filterHeight(passedArray)
 	{
 		var resultsArray = [];
 		var heightInput = prompt("Please enter the height you wish to search for, in format \" #'#\" \".");
-		
 		if (/^[0-9]{1}\'[0-9]{1,2}\"$/.test(heightInput))
 		{
 		resultsArray = omniSearch(passedArray, "formattedHeight", heightInput)
@@ -517,11 +575,11 @@ function filterHeight(passedArray)
 	};
 
 
+
 function filterWeight(passedArray)
 	{
 		var resultsArray = [];
 		var weightInput = prompt("Please enter the weight you wish to search for, in format \"###\" (weight is displayed in Lbs).");
-		
 		if (/^[0-9]{2,3}$/.test(weightInput))
 		{
 		resultsArray = omniSearch(passedArray, "weight", weightInput)
@@ -539,11 +597,11 @@ function filterWeight(passedArray)
 	};
 
 
+
 function filterEyeColor(passedArray)
 	{
 		var resultsArray = [];
 		var eyeColorInput = prompt("Please enter the eye color you wish to search for, in format \"color\".");
-		
 		if (eyeColorInput == null)
 		{
 			requestKey();
@@ -561,11 +619,11 @@ function filterEyeColor(passedArray)
 	};
 
 
+
 function filterOccupation(passedArray)
 	{
 		var resultsArray = [];
 		var occupationInput = prompt("Please enter the occupation you wish to search for, in format \"occupation\".");
-		
 		if (occupationInput == null)
 		{
 			requestKey();
@@ -583,39 +641,41 @@ function filterOccupation(passedArray)
 	};
 
 
+
 function displayResults (passedArray)
 	{
 		if(typeof passedArray[0] != 'undefined')
-		{
-		 	var print = passedArray.map(function(person)
-		 	{return "First Name:  " + person.firstName + "\n" +
-					"Last Name:  " + person.lastName + "\n" +
-					"ID Number:  " + person.personID + "\n" +
-					"Gender:  " + person.gender + "\n" +
-					"Date of Birth:  " + person.dob + "\n" +
-					"Age (Years):  " + person.ageInYears + "\n" +
-					"Height:  " + person.formattedHeight + "\n" +
-					"Weight:  " + person.weight + " Lbs" + "\n" +
-					"Eye Color:  " + person.eyeColor + "\n" +
-					"Occupation:  " + person.occupation + "\n" +
-					"Spouse: " + concatNames(person.spouseName) + "\n" +
-				    "Children: " + concatNames(person.childrenNames) + "\n" +
-				    "Parents: " + concatNames(person.parentNames) + "\n" +
-				    "Siblings: " + concatNames(person.siblingNames) + "\n" +
-				    "Ancestors: " + concatNames(person.ancestors) + "\n" +
-					"Descendants: " + concatNames(person.descendants) + "\n" +
-					"Aunts & Uncles: " + concatNames(person.unclesAndAunts) + "\n" +
-					"Nieces & Nephews: " + concatNames(person.niecesAndNephews) + "\n" + 
-					"Next of Kin: " + concatNames(person.nextOfKin) + "\n" + "\n\n\n"});
-		}
+			{
+			 	var print = passedArray.map(function(person)
+			 	{return "First Name:  " + person.firstName + "\n" +
+						"Last Name:  " + person.lastName + "\n" +
+						"ID Number:  " + person.personID + "\n" +
+						"Gender:  " + person.gender + "\n" +
+						"Date of Birth:  " + person.dob + "\n" +
+						"Age (Years):  " + person.ageInYears + "\n" +
+						"Height:  " + person.formattedHeight + "\n" +
+						"Weight:  " + person.weight + " Lbs" + "\n" +
+						"Eye Color:  " + person.eyeColor + "\n" +
+						"Occupation:  " + person.occupation + "\n" +
+						"Spouse: " + concatNames(person.spouseName) + "\n" +
+					    "Children: " + concatNames(person.childrenNames) + "\n" +
+					    "Parents: " + concatNames(person.parentNames) + "\n" +
+					    "Siblings: " + concatNames(person.siblingNames) + "\n" +
+					    "Ancestors: " + concatNames(person.ancestors) + "\n" +
+						"Descendants: " + concatNames(person.descendants) + "\n" +
+						"Aunts & Uncles: " + concatNames(person.unclesAndAunts) + "\n" +
+						"Nieces & Nephews: " + concatNames(person.niecesAndNephews) + "\n" + 
+						"Next of Kin: " + concatNames(person.nextOfKin) + "\n" + "\n\n\n"});
+			}
 		else
-		{
-			var print = ["No Results Found"];
-		}
+			{
+				var print = ["No Results Found"];
+			}
 		alert("\n\nSearch Results:\n\n\n" + print.join("") +"\n\n\nPress OK to Start New Search\n\n");
 		console.log(print);
 		requestKey();
 	};
+
 
 
 function checkIfArrayUndefined(passedArray)
@@ -631,10 +691,11 @@ function checkIfArrayUndefined(passedArray)
 	};
 
 
+
 function concatNames(passedArray)
 	{
 		var namesCombined = [];
-
+		
 		if(typeof passedArray[0] != 'undefined')
 		{
 			for (var i = 0; i < passedArray.length; i++)
@@ -646,7 +707,30 @@ function concatNames(passedArray)
 		return checkIfArrayUndefined(namesCombined);
 	};
 
+
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -655,12 +739,13 @@ function concatNames(passedArray)
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+
 function omniSearch(passedArray, searchCriteria, searchTerm)
 	{
-		try
-		{
-			var filteredArray = passedArray.filter(function(value){return value[searchCriteria] == searchTerm;});
-			return filteredArray;
+		try{
+		var filteredArray = passedArray.filter(function(value){return value[searchCriteria] == searchTerm;});
+		return filteredArray;
 		}
 		catch(e)
 		{
@@ -668,14 +753,15 @@ function omniSearch(passedArray, searchCriteria, searchTerm)
 			return "Unable to search.";
 		}
 	};
+
+
 
 
 function rangeSearch(passedArray, searchCriteria, searchRangeArray)
 	{
-		try
-		{
-			var filteredArray = passedArray.filter(function(value){return value[searchCriteria] >= searchRangeArray[0] && value[searchCriteria] <= searchRangeArray[1];});
-			return filteredArray;
+		try{
+		var filteredArray = passedArray.filter(function(value){return value[searchCriteria] >= searchRangeArray[0] && value[searchCriteria] <= searchRangeArray[1];});
+		return filteredArray;
 		}
 		catch(e)
 		{
@@ -683,6 +769,7 @@ function rangeSearch(passedArray, searchCriteria, searchRangeArray)
 			return "Unable to search.";
 		}
 	};
+
 
 
 function findSpouse(passedPerson)
@@ -695,6 +782,7 @@ function findSpouse(passedPerson)
 		}
 		return spouseArray;
 	};
+
 
 
 function findChildren(passedPerson)
@@ -713,6 +801,7 @@ function findChildren(passedPerson)
 	};
 
 
+
 function findParents(passedPerson)
 	{
 		var parentsArray = [];
@@ -726,6 +815,7 @@ function findParents(passedPerson)
 		}
 		return sortAge(parentsArray);
 	};
+
 
 
 function findSiblings(passedPerson)
@@ -752,10 +842,13 @@ function findSiblings(passedPerson)
 	};
 
 
+
 function findDescendants(passedPerson, passedRelationIndex)
 		{	
 			var descendantArray = [];
+
 			var newIndex = 0;
+
 			var childrenArray = findChildren(passedPerson);
 
 			if(typeof childrenArray[0] != 'undefined')
@@ -776,10 +869,13 @@ function findDescendants(passedPerson, passedRelationIndex)
 		};
 
 
+
 function findAncestors(passedPerson, passedRelationIndex)
 		{
 			var ancestorArray = [];
+
 			var newIndex = 0;
+
 			var parentArray = findParents(passedPerson);
 
 			if(typeof parentArray[0] != 'undefined')
@@ -800,6 +896,7 @@ function findAncestors(passedPerson, passedRelationIndex)
 		};
 
 
+
 function findNiecesAndNephews(passedPerson)
 		{	
 			var siblingsArray = [];
@@ -815,6 +912,7 @@ function findNiecesAndNephews(passedPerson)
 				}
 			return sortAge(niecesAndNephews);
 		};
+
 
 
 function findUnclesAndAunts(passedPerson)
@@ -833,7 +931,30 @@ function findUnclesAndAunts(passedPerson)
 			return sortAge(unclesAndAunts);
 		};
 
+
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -841,6 +962,8 @@ function findUnclesAndAunts(passedPerson)
 		//    FORMATTING FUNCTIONS
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 
 function formatDatabase(passedArray)
 	{
@@ -855,6 +978,7 @@ function formatDatabase(passedArray)
 	};
 
 
+
 function formatPersonAttributes(passedPerson)
 	{
 		passedPerson.formattedHeight = formatHeight(passedPerson);            
@@ -863,11 +987,13 @@ function formatPersonAttributes(passedPerson)
 		return passedPerson;
 	};
 
+
+
 /*  
     Each relative array returned to the person object will be sorted by age before being returned.
     A "relation type index" number is applied to each relative type to allow for next of kin sorting.
-    Both ancestors and decendants will contiue to have higher indexes applied through each generation
-    (for each recursion cycle), which will maintain the proper next of kin order.
+    Both ancestors and decendants will contiue to have higher indexes applied through each generation (for each recursion cycle),
+    which will maintain the proper next of kin order.
 */
 
 function formatPersonRelatives(passedPerson)
@@ -886,11 +1012,13 @@ function formatPersonRelatives(passedPerson)
 	};
 
 
+
 function formatRelative(passedArray, passedRelationIndex)
 	{
 		var formattedRelative = passedArray.map(function(person){return {relationTypeIndex: passedRelationIndex, firstName: person.firstName, lastName: person.lastName, personID: person.personID, ageInYears: person.ageInYears}});
 		return	formattedRelative;
 	};
+
 
 
 function formatKeyInput(userKeyInput)
@@ -913,6 +1041,7 @@ function formatKeyInput(userKeyInput)
 	};
 
 
+
 function formatRange(passedString)
 	{
 		var formattedRangeArray = passedString.split("-");
@@ -920,9 +1049,11 @@ function formatRange(passedString)
 	};
 
 
+
 function formatAge(passedPerson)
 	{
 		var ageArray = passedPerson.dob.split("/");
+
 	 	var todayDate = new Date();
 	  	var todayYear = todayDate.getFullYear();
 	  	var todayMonth = todayDate.getMonth();
@@ -941,6 +1072,7 @@ function formatAge(passedPerson)
 	};
 
 
+
 function formatHeight(passedPerson)
 	{
 	    var feet = Math.floor(passedPerson.height/12);
@@ -949,7 +1081,30 @@ function formatHeight(passedPerson)
 	    return formattedHeight;
 	};
 
+
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -958,11 +1113,14 @@ function formatHeight(passedPerson)
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+
 function sortAge(passedArray)
 	{
 		passedArray.sort(function(a, b){return b.ageInYears - a.ageInYears});
 		return	passedArray;
 	};
+
 
 
 function sortRelationIndex(passedArray)
@@ -972,14 +1130,16 @@ function sortRelationIndex(passedArray)
 	};
 
 
+
 function returnNextOfKin(passedArray)
 	{
 		var nextOfKin = [];
-		
 		if(typeof passedArray[0] != 'undefined'){
 			nextOfKin[0] = passedArray[0];
 		}
 		return nextOfKin;
 	}
+
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
