@@ -2,6 +2,6 @@ For this project I was required to use only window.alert() and window.prompt() f
 
 Finds and displays not only personal attributes of selected individuals, but also their spouse, children, parents, siblings, ancestors, descendants, aunts/uncles, nieces/nephews, and next of kin. 
 
-See video demos of other projects at: http://boyceportfolio.com/projects.html
+See video demos of other projects here: http://boyceportfolio.com/projects
 
 ![alt text](https://github.com/jdboyce/Database_Search_Engine/blob/master/GitHub_Cover.png)
